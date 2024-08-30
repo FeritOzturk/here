@@ -4,12 +4,12 @@
 <style fprolloverstyle="">
 A:hover {color: #3D9281; font-family: Verdana}
 body {
-	background-color: #336666;
+	background-color: #FFFFFF;
 }
 .style1 {
 	font-size: 12pt;
 	font-weight: bold;
-	color: #CC0000;
+	color: #000000;
 }
 </style>
 
