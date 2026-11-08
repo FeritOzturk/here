@@ -1,0 +1,52 @@
+/* Style the hoverable word */
+.tooltip-word {
+  border-bottom: 2px dotted #007bff;
+  cursor: help;
+  position: relative;
+  display: inline-block;
+}
+
+/* Create the tooltip box structure */
+.tooltip-word::after {
+  content: attr(data-definition);
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: normal;
+  width: 250px;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Create a small arrow under the tooltip box */
+.tooltip-word::before {
+  content: "";
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Show both the box and the arrow on hover or touch focus */
+.tooltip-word:hover::after,
+.tooltip-word:hover::before,
+.tooltip-word:focus::after,
+.tooltip-word:focus::before {
+  opacity: 1;
+  pointer-events: auto;
+}
+
